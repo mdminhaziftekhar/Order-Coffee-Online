@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Order Coffee Online</string>
+    <string name="fillout"><u>Sir Please tell us what you want and fill your information : </u></string>
+    <string name="chooseCoffee">Choose your desired coffee and amount :</string>
+</resources>
