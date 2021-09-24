@@ -75,7 +75,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:fontFamily="serif"
-        android:text="Black Coffee"
+        android:text="Black Coffee (10$)"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,8 +83,8 @@
 
     <Button
         android:id="@+id/coffee1plus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:backgroundTint="#794A4A"
         android:text="+"
@@ -96,8 +96,8 @@
 
     <Button
         android:id="@+id/coffee1minus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:backgroundTint="#794A4A"
         android:text="-"
@@ -127,7 +127,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:fontFamily="serif"
-        android:text="Coffee Latte"
+        android:text="Coffee Latte (15$)"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,8 +135,8 @@
 
     <Button
         android:id="@+id/coffee2plus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#794A4A"
@@ -161,8 +161,8 @@
 
     <Button
         android:id="@+id/coffee2minus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:backgroundTint="#794A4A"
         android:text="-"
@@ -179,7 +179,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:fontFamily="serif"
-        android:text="Cappuccino"
+        android:text="Cappuccino (10$)"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -187,7 +187,7 @@
 
     <Button
         android:id="@+id/coffee3plus"
-        android:layout_width="50dp"
+        android:layout_width="48dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
@@ -213,8 +213,8 @@
 
     <Button
         android:id="@+id/coffee3minus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:backgroundTint="#794A4A"
         android:text="-"
@@ -231,7 +231,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:fontFamily="serif"
-        android:text="Macchiato"
+        android:text="Macchiato (20$)"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -239,7 +239,7 @@
 
     <Button
         android:id="@+id/coffee4plus"
-        android:layout_width="50dp"
+        android:layout_width="48dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
@@ -265,8 +265,8 @@
 
     <Button
         android:id="@+id/coffee4minus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:backgroundTint="#794A4A"
         android:text="-"
