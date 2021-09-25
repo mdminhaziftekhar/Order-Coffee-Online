@@ -2,8 +2,12 @@ package com.example.ordercoffeeonline;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -17,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
     int total = 0;
     int coff1 = 0, coff2 = 0, coff3 = 0, coff4 = 0;
+    boolean whipp = false, choc = false;
 
     public void coffee1plus(View view){
         if(coff1 < 100) coff1++;
@@ -75,6 +80,55 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void order(View view){
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.whippedcream);
+        CheckBox chocolate = (CheckBox) findViewById(R.id.Chocolate);
+        if(whippedCream.isChecked()) whipp = true;
+        else whipp = false;
+        if(chocolate.isChecked()) choc = true;
+        else choc = false;
+        int quant = coff1+coff2+coff3+coff4;
+        total = (coff1*10) + (coff2*15) + (coff3*10) + (coff4*20);
+        int a = 0, b = 0;
+        if(whipp == true) a = 2;
+        if(choc == true) b = 5;
+        quant = (quant*a) + (quant*b);
+        total += quant;
 
+//        TextView textView = (TextView) findViewById(R.id.coffee1amount);
+//        textView.setText("Total Amount is : "+total);
+        EditText name = (EditText) findViewById(R.id.name);
+        String Name = name.getText().toString();
+
+        EditText address = (EditText) findViewById(R.id.address);
+        String Address = address.getText().toString();
+
+        EditText phone = (EditText) findViewById(R.id.Number);
+        String Phone = phone.getText().toString();
+
+        String message = "Name : "+Name+"\nAddress : "+Address+"\nPhone : "+Phone+"\n";
+        if(coff1 > 0) {
+            message = message + "Black Coffee : "+coff1+"\n";
+        }
+        if(coff2 > 0){
+            message = message + "Latte : "+coff2+"\n";
+        }
+        if(coff3 > 0){
+            message = message + "Cappuccino : "+coff3+"\n";
+        }
+        if(coff4 > 0){
+            message = message + "Macchiato : "+coff4+"\n";
+        }
+
+        message = message + "Total : "+total+"\nThanks for the order sir!";
+
+        Intent email = new Intent(Intent.ACTION_SENDTO);
+        email.setData(Uri.parse("mailto:"));
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"ordercoffee@gmail.com"});
+        email.putExtra(Intent.EXTRA_SUBJECT, "Order for coffee");
+        email.putExtra(Intent.EXTRA_TEXT, message);
+
+        if(email.resolveActivity(getPackageManager()) != null){
+            startActivity(Intent.createChooser(email, "Choose an Email client : "));
+        }
     }
 }
